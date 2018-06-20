@@ -25,7 +25,7 @@ msgstr ""
 #. module: account_payment_partner
 #: model:ir.ui.view,arch_db:account_payment_partner.report_invoice_payment_mode
 msgid "<strong>Payment Mode:</strong>"
-msgstr ""
+msgstr "<strong>Betalingsform:</strong>"
 
 #. module: account_payment_partner
 #: model:ir.model.fields,help:account_payment_partner.field_account_invoice_bank_account_required
@@ -43,22 +43,22 @@ msgstr "Bank konti påkrævet"
 #: model:ir.model.fields,field_description:account_payment_partner.field_res_partner_customer_payment_mode_id
 #: model:ir.model.fields,field_description:account_payment_partner.field_res_users_customer_payment_mode_id
 msgid "Customer Payment Mode"
-msgstr ""
+msgstr "Kunde betalingsform"
 
 #. module: account_payment_partner
 #: model:ir.model,name:account_payment_partner.model_account_invoice
 msgid "Invoice"
-msgstr ""
+msgstr "Faktura"
 
 #. module: account_payment_partner
 #: model:ir.model,name:account_payment_partner.model_account_move_line
 msgid "Journal Item"
-msgstr ""
+msgstr "Journalpostering"
 
 #. module: account_payment_partner
 #: model:ir.model,name:account_payment_partner.model_res_partner
 msgid "Partner"
-msgstr ""
+msgstr "Partner"
 
 #. module: account_payment_partner
 #: model:ir.model.fields,field_description:account_payment_partner.field_account_invoice_payment_mode_id
@@ -70,22 +70,22 @@ msgstr "Betalingsform"
 #. module: account_payment_partner
 #: model:ir.ui.view,arch_db:account_payment_partner.view_move_line_form
 msgid "Payments"
-msgstr ""
+msgstr "Betalinger"
 
 #. module: account_payment_partner
 #: model:ir.model.fields,help:account_payment_partner.field_res_partner_customer_payment_mode_id
 #: model:ir.model.fields,help:account_payment_partner.field_res_users_customer_payment_mode_id
 msgid "Select the default payment mode for this customer."
-msgstr ""
+msgstr "Vælg standard betalingsform for denne kunde."
 
 #. module: account_payment_partner
 #: model:ir.model.fields,help:account_payment_partner.field_res_partner_supplier_payment_mode_id
 #: model:ir.model.fields,help:account_payment_partner.field_res_users_supplier_payment_mode_id
 msgid "Select the default payment mode for this supplier."
-msgstr ""
+msgstr "Vælg standard betalingsform for denne leverandør."
 
 #. module: account_payment_partner
 #: model:ir.model.fields,field_description:account_payment_partner.field_res_partner_supplier_payment_mode_id
 #: model:ir.model.fields,field_description:account_payment_partner.field_res_users_supplier_payment_mode_id
 msgid "Supplier Payment Mode"
-msgstr ""
+msgstr "Leverandør betalingsform"
