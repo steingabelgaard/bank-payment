@@ -7,6 +7,9 @@
 from odoo import models, fields, api, _
 from odoo.exceptions import UserError
 
+import logging
+_logger = logging.getLogger(__name__)
+
 
 class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
@@ -52,8 +55,10 @@ class AccountInvoice(models.Model):
         vals = {
             'payment_mode_id': payment_mode.id or self.payment_mode_id.id,
         }
+        vals = self.env['account.payment.order'].play_onchanges(vals, ['payment_mode_id'])
         # other important fields are set by the inherit of create
         # in account_payment_order.py
+        _logger.info('VALS: %s', vals)
         return vals
 
     @api.multi
@@ -68,13 +73,23 @@ class AccountInvoice(models.Model):
             if not inv.move_id:
                 raise UserError(_(
                     "No Journal Entry on invoice %s") % inv.number)
+            if not inv.payment_mode_id:
+                raise UserError(_(
+                    "No Payment Mode on invoice %s") % inv.number)
             applicable_lines = inv.move_id.line_ids.filtered(
                 lambda x: (
                     not x.reconciled and x.payment_mode_id.payment_order_ok and
-                    x.account_id.internal_type in ('receivable', 'payable') and
-                    not x.payment_line_ids
+                    x.account_id.internal_type in ('receivable', 'payable')
                 )
             )
+            # Exclude lines that are already in a non-cancelled
+            # and non-uploaded payment order; lines that are in a
+            # uploaded payment order are proposed if they are not reconciled,
+            paylines = self.env['account.payment.line'].search([
+                ('state', 'in', ('draft', 'open', 'generated')),
+                ('move_line_id', 'in', applicable_lines.ids)])
+            if paylines:
+                applicable_lines -= paylines.mapped('move_line_id')
             if not applicable_lines:
                 raise UserError(_(
                     'No Payment Line created for invoice %s because '
