@@ -7,16 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bank-payment (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 01:26+0000\n"
-"PO-Revision-Date: 2017-04-25 10:44+0000\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2019-02-16 16:52+0100\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Danish (http://www.transifex.com/oca/OCA-bank-payment-8-0/"
 "language/da/)\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #. module: account_banking_payment_export
 #: code:addons/account_banking_payment_export/models/res_partner_bank.py:17
@@ -36,33 +37,33 @@ msgstr "Aktiv"
 #: field:bank.payment.line,amount_currency:0
 #: view:payment.order:account_banking_payment_export.view_payment_order_form
 msgid "Amount"
-msgstr ""
+msgstr "Beløb"
 
 #. module: account_banking_payment_export
 #: model:ir.model,name:account_banking_payment_export.model_res_bank
 msgid "Bank"
-msgstr ""
+msgstr "Bank"
 
 #. module: account_banking_payment_export
 #: field:bank.payment.line,bank_id:0
 msgid "Bank Account"
-msgstr ""
+msgstr "Bank konto"
 
 #. module: account_banking_payment_export
 #: model:ir.model,name:account_banking_payment_export.model_res_partner_bank
 msgid "Bank Accounts"
-msgstr ""
+msgstr "Bank konti"
 
 #. module: account_banking_payment_export
 #: view:bank.payment.line:account_banking_payment_export.bank_payment_line_form
 #: field:payment.line,bank_line_id:0
 msgid "Bank Payment Line"
-msgstr ""
+msgstr "Bank betalingslinie"
 
 #. module: account_banking_payment_export
 #: field:bank.payment.line,name:0
 msgid "Bank Payment Line Ref"
-msgstr ""
+msgstr "Bank betalingslinie ref"
 
 #. module: account_banking_payment_export
 #: view:bank.payment.line:account_banking_payment_export.bank_payment_line_tree
@@ -71,7 +72,7 @@ msgstr ""
 #: view:payment.order:account_banking_payment_export.view_payment_order_form
 #: field:payment.order,bank_line_ids:0
 msgid "Bank Payment Lines"
-msgstr ""
+msgstr "Bank betalingslinier"
 
 #. module: account_banking_payment_export
 #: view:payment.manual:account_banking_payment_export.view_payment_manual_form
@@ -81,17 +82,17 @@ msgstr "Annuller"
 #. module: account_banking_payment_export
 #: field:payment.mode.type,code:0
 msgid "Code"
-msgstr ""
+msgstr "Kode"
 
 #. module: account_banking_payment_export
 #: field:bank.payment.line,communication:0
 msgid "Communication"
-msgstr ""
+msgstr "Kommunikation"
 
 #. module: account_banking_payment_export
 #: field:bank.payment.line,state:0
 msgid "Communication Type"
-msgstr ""
+msgstr "Kommunkationstype"
 
 #. module: account_banking_payment_export
 #: field:bank.payment.line,company_id:0
@@ -113,17 +114,17 @@ msgstr "Oprettet den"
 #. module: account_banking_payment_export
 #: field:bank.payment.line,currency:0
 msgid "Currency"
-msgstr ""
+msgstr "Valuta"
 
 #. module: account_banking_payment_export
 #: selection:payment.mode.type,payment_order_type:0
 msgid "Debit"
-msgstr ""
+msgstr "Debit"
 
 #. module: account_banking_payment_export
 #: selection:payment.order,payment_order_type:0
 msgid "Direct debit"
-msgstr ""
+msgstr "Debitor opkrævning"
 
 #. module: account_banking_payment_export
 #: field:bank.payment.line,display_name:0 field:payment.manual,display_name:0
@@ -134,7 +135,7 @@ msgstr "Vist navn"
 #. module: account_banking_payment_export
 #: selection:payment.mode,default_date_type:0
 msgid "Due"
-msgstr ""
+msgstr "Forfald"
 
 #. module: account_banking_payment_export
 #: selection:payment.order.create,date_type:0
@@ -144,34 +145,34 @@ msgstr "Forfaldsdato"
 #. module: account_banking_payment_export
 #: view:payment.order:account_banking_payment_export.view_payment_order_form
 msgid "Entry Information"
-msgstr ""
+msgstr "Posteringsinformation"
 
 #. module: account_banking_payment_export
 #: code:addons/account_banking_payment_export/wizard/payment_order_create.py:156
 #, python-format
 msgid "Entry Lines"
-msgstr ""
+msgstr "Posteringer"
 
 #. module: account_banking_payment_export
 #: code:addons/account_banking_payment_export/models/account_payment.py:83
 #, python-format
 msgid "Error"
-msgstr ""
+msgstr "Fejl"
 
 #. module: account_banking_payment_export
 #: field:payment.mode,type:0
 msgid "Export type"
-msgstr ""
+msgstr "Eksport type"
 
 #. module: account_banking_payment_export
 #: view:payment.order:account_banking_payment_export.view_payment_order_form
 msgid "General Information"
-msgstr ""
+msgstr "Generel information"
 
 #. module: account_banking_payment_export
 #: field:payment.mode,group_lines:0
 msgid "Group lines in payment orders"
-msgstr ""
+msgstr "Grupper linier i betalingsordre"
 
 #. module: account_banking_payment_export
 #: field:bank.payment.line,id:0 field:payment.manual,id:0
@@ -238,8 +239,7 @@ msgid "Keep empty for using all journals"
 msgstr ""
 
 #. module: account_banking_payment_export
-#: field:bank.payment.line,__last_update:0
-#: field:payment.manual,__last_update:0
+#: field:bank.payment.line,__last_update:0 field:payment.manual,__last_update:0
 #: field:payment.mode.type,__last_update:0
 msgid "Last Modified on"
 msgstr "Sidst ændret den"
