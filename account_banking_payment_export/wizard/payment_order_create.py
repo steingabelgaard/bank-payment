@@ -81,9 +81,9 @@ class PaymentOrderCreate(models.TransientModel):
                 ('credit', '>', 0),
                 '|',
                 ('account_id.type', '=', 'payable'),
-                '&',
+                #'&',
                 ('account_id.type', '=', 'receivable'),
-                ('reconcile_partial_id', '=', False),
+                #('reconcile_partial_id', '=', False),
             ]
 
     @api.multi
