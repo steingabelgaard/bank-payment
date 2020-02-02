@@ -80,6 +80,8 @@ class AccountPaymentMode(models.Model):
         ('line', 'One move per payment line'),
         ], string='Move Option', default='date')
     post_move = fields.Boolean(string='Post Move', default=True)
+    sequence_id = fields.Many2one('ir.sequence', string='Entry Sequence',
+        help="This field contains the information related to the numbering of the payments orders.", copy=False)
 
     @api.multi
     @api.constrains(

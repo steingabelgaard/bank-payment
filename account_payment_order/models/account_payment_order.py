@@ -158,9 +158,6 @@ class AccountPaymentOrder(models.Model):
 
     @api.model
     def create(self, vals):
-        if vals.get('name', 'New') == 'New':
-            vals['name'] = self.env['ir.sequence'].next_by_code(
-                'account.payment.order') or 'New'
         if vals.get('payment_mode_id'):
             payment_mode = self.env['account.payment.mode'].browse(
                 vals['payment_mode_id'])
@@ -171,6 +168,12 @@ class AccountPaymentOrder(models.Model):
                     not vals.get('date_prefered') and
                     payment_mode.default_date_prefered):
                 vals['date_prefered'] = payment_mode.default_date_prefered
+            if payment_mode.sequence_id and vals.get('name', 'New') == 'New':
+                vals['name'] = payment_mode.sequence_id.next_by_id()
+                
+        if vals.get('name', 'New') == 'New':
+            vals['name'] = self.env['ir.sequence'].next_by_code(
+                'account.payment.order') or 'New'
         return super(AccountPaymentOrder, self).create(vals)
 
     @api.onchange('payment_mode_id')
