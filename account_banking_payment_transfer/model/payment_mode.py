@@ -13,7 +13,7 @@ class PaymentMode(models.Model):
 
     transfer_account_id = fields.Many2one(
         'account.account', string='Transfer account',
-        domain=[('type', '!=', 'view'), ('reconcile', '=', True)],
+        domain=[('type', '!=', 'view')],
         help='Pay off lines in sent orders with a move on this '
         'account. You can only select accounts of type regular '
         'that are marked for reconciliation')
@@ -25,3 +25,4 @@ class PaymentMode(models.Model):
         ('date', 'One move per payment date'),
         ('line', 'One move per payment line'),
         ], string='Transfer move option', default='date')
+    post_move = fields.Boolean(string='Post Move', default=False)

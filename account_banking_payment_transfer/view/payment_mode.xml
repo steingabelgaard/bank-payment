@@ -14,7 +14,6 @@
                     <group name="trf-move-config" string="Transfer move settings" colspan="2">
                         <field name="transfer_account_id"
                                domain="[('type', '!=', 'view'),
-                                       ('reconcile', '=', True),
                                        ('company_id', '=', company_id)]"
                                context="{
                                    'default_reconcile': True,
@@ -24,6 +23,7 @@
                                domain="[('company_id', '=', company_id)]"
                                />
                         <field name="transfer_move_option"/>
+                        <field name="post_move" />
                     </group>
                 </xpath>
             </field>
