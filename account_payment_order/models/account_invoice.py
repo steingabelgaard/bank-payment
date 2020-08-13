@@ -55,7 +55,8 @@ class AccountInvoice(models.Model):
         vals = {
             'payment_mode_id': payment_mode.id or self.payment_mode_id.id,
         }
-        vals = self.env['account.payment.order'].play_onchanges(vals, ['payment_mode_id'])
+        # Onchange is weird now a days
+        # vals = self.env['account.payment.order'].play_onchanges(vals, ['payment_mode_id'])
         # other important fields are set by the inherit of create
         # in account_payment_order.py
         _logger.info('VALS: %s', vals)
